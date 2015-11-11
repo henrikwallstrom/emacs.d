@@ -1,0 +1,12 @@
+elpa
+el-get
+eshell
+*.elc
+*.el~
+url
+bookmarks
+auto-save-list
+jump-bookmarks.el
+/projectile-bookmarks.eld
+/projectile.cache
+/recentf
