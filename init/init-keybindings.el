@@ -59,4 +59,7 @@
 
 (global-set-key (kbd "H-o") 'ace-window)
 
+(when (package-installed-p 'dash-at-point)
+  (global-set-key (kbd "M-h") 'dash-at-point))
+
 (provide 'init-keybindings)

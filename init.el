@@ -40,6 +40,8 @@
 (when (memq window-system '(mac ns))
   (require 'init-osx))
 
+(provide 'init-dash-documentation-browser)
+
 (require 'init-keybindings)
 
 ;; (let ((init-host-feature (intern (concat "init-" host))))
