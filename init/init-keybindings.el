@@ -15,6 +15,7 @@
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
 (global-set-key (kbd "M-t") 'helm-mini)
 (global-set-key (kbd "M-o") 'sr-open-file)
+(global-set-key (kbd "C-x C-o") 'sr-open-file)
 
 ;; If you want to be able to M-x without meta
 (global-set-key (kbd "C-x C-m") 'helm-M-x)

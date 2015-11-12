@@ -11,7 +11,6 @@
 ;; enable y/n answers
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-
 ;; turn off the blinking cursor
 (blink-cursor-mode -1)
 
@@ -38,15 +37,17 @@
 ;;(require 'zerodark-theme)
 ;;(load-theme 'zerodark)
 ;;(load-theme 'seti t)
-(load-theme 'atom-one-dark t)
+(when (display-graphic-p)
+  (load-theme 'atom-one-dark t))
 ;;(load-theme 'dracula t)
 ;;(load-theme 'solarized t)
 
 (require 'smart-mode-line)
 (setq sml/no-confirm-load-theme t)
 ;; delegate theming to the currently active theme
-(setq sml/theme nil)
 (add-hook 'after-init-hook #'sml/setup)
+(when (display-graphic-p)
+  (setq sml/theme nil))
 
 ;; show the cursor when moving after big movements in the window
 (require 'beacon)

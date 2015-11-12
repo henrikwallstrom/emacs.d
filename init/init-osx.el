@@ -29,6 +29,6 @@
 ;; Enable emoji, and stop the UI from freezing when trying to display them.
 (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend)
 
-(set-default-font "Monaco 14")
+(set-default-font "Monaco 16")
 
 (provide 'init-osx)
