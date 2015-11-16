@@ -8,6 +8,7 @@
 (global-set-key (kbd "M-w") 'kill-buffer)
 ;;(global-set-key (kbd "M-w") 'delete-window)
 (global-set-key (kbd "M-§") 'other-frame)
+(global-set-key (kbd "C-§") 'other-window)
 
 ;; Helm
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -35,6 +36,9 @@
 ;; Maximize
 (global-set-key (kbd "M-RET") 'toggle-frame-maximized)
 
+;; Zoom-Window
+(global-set-key (kbd "C-1") 'zoom-window-zoom)
+
 ;; Help
 (define-key 'help-command (kbd "C-m") 'discover-my-major)
 (define-key 'help-command (kbd "C-f") 'find-function)
@@ -53,7 +57,8 @@
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
-
+(global-set-key (kbd "C-x M-l") 'magit-log)
+(global-set-key (kbd "C-x M-b") 'magit-blame)
 
 ;; Replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -62,5 +67,9 @@
 
 (when (package-installed-p 'dash-at-point)
   (global-set-key (kbd "M-h") 'dash-at-point))
+
+;; Company mode
+(define-key company-active-map (kbd "TAB") 'company-complete-selection)
+
 
 (provide 'init-keybindings)

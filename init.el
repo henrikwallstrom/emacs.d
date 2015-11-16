@@ -11,11 +11,11 @@
 (package-initialize)
 
 ;; dir vars
-;; (defvar host (substring (shell-command-to-string "hostname") 0 -1))
+(defvar host (substring (shell-command-to-string "hostname") 0 -1))
 (defvar init-dir "~/.emacs.d/init")
 (defvar local-packages-dir "~/.emacs.d/local-packages")
 (defvar site-lisp-dir "~/.emacs.d/site-lisp")
-;; (defvar host-dir (concat "~/.emacs.d/hosts/" host))
+(defvar host-dir (concat "~/.emacs.d/hosts/" host))
 
 ;; load path
 (add-to-list 'load-path init-dir)
