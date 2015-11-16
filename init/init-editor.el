@@ -1,7 +1,7 @@
 ;; enhance core editing experience
 
 (setq-default indent-tabs-mode nil)   ;; don't use tabs to indent
-(setq-default tab-width 8)            ;; but maintain correct appearance
+(setq-default tab-width 4)            ;; but maintain correct appearance
 
 ;; but use settings from .editorconfig if avvailable
 (require 'editorconfig)
