@@ -63,5 +63,21 @@
 ;; misc
 (require 'transpose-frame)
 
+;; move
+
+(defun magit-create-branch-from-jira-issue ()
+  (interactive)
+  (let ((branch-name (replace-regexp-in-string "[^a-zA-Z0-9-]+" "_" (s-trim (current-kill 0 t))))
+        (start-point (magit-read-branch-or-commit "Create branch starting at")))
+    (magit-branch branch-name start-point)
+    (magit-checkout branch-name)))
+
+(add-hook 'git-commit-mode-hook (lambda ()
+                                  (ignore-errors
+                                    (when (string-prefix-p "C:\\Projects\\ftgp\\monitor" (magit-toplevel))
+                                      (goto-char (point-min))
+                                      (insert (format "%s: " (car (s-slice-at "_" (magit-get-current-branch)))))))))
+
+
 
 (provide 'init-editor)
