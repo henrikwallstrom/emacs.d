@@ -36,6 +36,7 @@
 (require 'init-programming)
 (require 'init-js)
 (require 'init-elixir)
+(require 'init-yasnippet)
 
 (when (memq window-system '(mac ns))
   (require 'init-osx))
