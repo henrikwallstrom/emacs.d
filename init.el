@@ -2,6 +2,7 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+(server-start)
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
@@ -21,7 +22,7 @@
 (add-to-list 'load-path init-dir)
 (add-to-list 'load-path local-packages-dir)
 (add-to-list 'load-path site-lisp-dir)
-;; (add-to-list 'load-path host-dir)
+(add-to-list 'load-path host-dir)
 
 (dolist (directory (list init-dir local-packages-dir site-lisp-dir))
   (let ((default-directory directory))
@@ -45,9 +46,9 @@
 
 (require 'init-keybindings)
 
-;; (let ((init-host-feature (intern (concat "init-" host))))
-;;   (require init-host-feature nil 'noerror))
-;; (require 'init-private-modules)
+(let ((init-host-feature (intern (concat "init-" host))))
+  (require init-host-feature nil 'noerror))
+;;(require 'init-private-modules)
 
 
 
