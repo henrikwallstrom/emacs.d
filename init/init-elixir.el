@@ -8,14 +8,15 @@
 
 (require 'smartparens)
 
-;; todo: make paths host specific
-(add-to-list 'load-path "~/Projects/github/emacs-elixir/")
-(add-to-list 'load-path "~/Projects/github/alchemist.el/")
+;; Use from source
+;;(add-to-list 'load-path "~/Project/github/emacs-elixir/")
+;;(add-to-list 'load-path "~/Project/github/alchemist.el/")
 
 (require 'alchemist)
 
-(setq alchemist-goto-elixir-source-dir "~/Projects/github/elixir/")
-(setq alchemist-goto-erlang-source-dir "~/Projects/github/otp/")
+;; todo: make host specific
+(setq alchemist-goto-elixir-source-dir "~/Project/github/elixir/")
+(setq alchemist-goto-erlang-source-dir "~/Project/github/otp/")
 
 (defun t-elixir-mode-hook ()
   (yas/minor-mode +1)
