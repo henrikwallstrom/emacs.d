@@ -37,14 +37,16 @@
 (projectile-global-mode)
 
 (helm-projectile-on)
+(setq projectile-enable-caching t)
 
 ;; multiple cursors
 (require 'multiple-cursors)
 
 ;; Paren mode and electric-pair mode
+(require 'smartparens-config)
 (show-paren-mode t)
-(electric-pair-mode t)
-(electric-indent-mode t)
+;;(electric-pair-mode t)
+;;(electric-indent-mode t)
 
 ;; Show keystrokes in progress quicker
 (setq echo-keystrokes 0.1)

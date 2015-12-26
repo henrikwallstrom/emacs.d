@@ -59,5 +59,9 @@
 (set-face-foreground 'show-paren-match "#f66")
 (set-face-attribute 'show-paren-match nil :weight 'extra-bold)
 
+;;(setq sp-highlight-pair-overlay nil)
+;;(setq sp-highlight-wrap-overlay nil)
+;;(setq sp-highlight-wrap-tag-overlay nil)
+
 
 (provide 'init-ui)

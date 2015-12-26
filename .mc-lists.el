@@ -3,11 +3,14 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        js2-mode-show-node
         keyboard-escape-quit
         ))
 
 (setq mc/cmds-to-run-once
       '(
         helm-M-x
+        mouse-buffer-menu
+        switch-to-buffer
         toggle-frame-maximized
         ))

@@ -11,6 +11,9 @@
 ;; Auto refresh dired, but be quiet about it
 (setq global-auto-revert-non-file-buffers t)
 
+;; Auto-refresh dired on file change
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
 ;; enable ‘ls-lisp’ on all platforms
 ;;(require 'ls-lisp)
 ;;(setq ls-lisp-use-insert-directory-program t)

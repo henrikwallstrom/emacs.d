@@ -10,6 +10,13 @@
 (global-set-key (kbd "M-§") 'other-frame)
 (global-set-key (kbd "C-§") 'other-window)
 
+(global-set-key (kbd "M-1") 'zoom-window-zoom)
+(global-set-key (kbd "M-0") 'delete-window)
+(global-set-key (kbd "M-2") 'split-window-vertically)
+(global-set-key (kbd "M-3") 'split-window-horizontally)
+(global-set-key (kbd "M-4") 'balance-windows)
+(global-set-key (kbd "M-9") 'delete-other-windows)
+
 ;; Helm
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") #'helm-show-kill-ring)
@@ -69,7 +76,7 @@
   (global-set-key (kbd "M-h") 'dash-at-point))
 
 ;; Company mode
-(define-key company-active-map (kbd "TAB") 'company-complete-selection)
+;;(define-key company-active-map (kbd "TAB") 'company-complete-selection)
 
 
 (provide 'init-keybindings)
