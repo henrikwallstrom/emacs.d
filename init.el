@@ -2,7 +2,7 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-(server-start)
+;;(server-start)
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
@@ -36,7 +36,6 @@
 (require 'init-ui)
 (require 'init-programming)
 (require 'init-js)
-(require 'init-elixir)
 (require 'init-yasnippet)
 
 (when (memq window-system '(mac ns))
@@ -49,6 +48,8 @@
 (let ((init-host-feature (intern (concat "init-" host))))
   (require init-host-feature nil 'noerror))
 ;;(require 'init-private-modules)
+
+(require 'init-elixir)
 
 
 
