@@ -9,8 +9,8 @@
 (require 'smartparens)
 
 ;; Use from source
-;;(add-to-list 'load-path "~/Project/github/emacs-elixir/")
-;;(add-to-list 'load-path "~/Project/github/alchemist.el/")
+(add-to-list 'load-path "~/Project/github/emacs-elixir/")
+(add-to-list 'load-path "~/Project/github/alchemist.el/")
 
 (require 'alchemist)
 

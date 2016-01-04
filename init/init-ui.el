@@ -32,13 +32,24 @@
 (column-number-mode t)
 (size-indication-mode t)
 
-;; theme (http://emacsthemes.com/themes/)
+(require 'powerline)
+
+;; Theme (http://emacsthemes.com/themes/)
 
 ;;(require 'zerodark-theme)
 ;;(load-theme 'zerodark)
 ;;(load-theme 'seti t)
 (when (display-graphic-p)
-  (load-theme 'atom-one-dark t))
+  (require 'moe-theme)
+  (load-theme 'moe-dark t)
+  ;;(moe-theme-set-color 'w/b)
+  (moe-theme-set-color 'yellow)
+  (powerline-moe-theme)
+  (setq moe-theme-highlight-buffer-id t)
+  )
+;;(load-theme 'zenburn t)
+;;(load-theme 'gruvbox t)
+;;(load-theme 'atom-one-dark t)
 ;;(load-theme 'dracula t)
 ;;(load-theme 'solarized t)
 
