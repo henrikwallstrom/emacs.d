@@ -46,6 +46,7 @@
   (moe-theme-set-color 'yellow)
   (powerline-moe-theme)
   (setq moe-theme-highlight-buffer-id t)
+  (set-face-foreground 'font-lock-doc-face "DarkGray")
   )
 ;;(load-theme 'zenburn t)
 ;;(load-theme 'gruvbox t)

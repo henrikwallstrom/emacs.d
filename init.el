@@ -37,6 +37,7 @@
 (require 'init-programming)
 (require 'init-js)
 (require 'init-yasnippet)
+;;(require 'init-csharp)
 
 (when (memq window-system '(mac ns))
   (require 'init-osx))
@@ -52,10 +53,35 @@
 (require 'init-elixir)
 
 
+(defun my-visit-pull-request-url ()
+  "Visit the current branch's PR on Github."
+  (interactive)
+  (browse-url
+   (format "https://github.com/%s/pull/new/%s"
+           (replace-regexp-in-string
+            "\\`.+github\\.com:\\(.+\\)\\.git\\'" "\\1"
+            (magit-get "remote"
+                       (magit-get-remote)
+                       "url"))
+           (cdr (or (magit-get-remote-branch)
+                    (user-error "No remote branch"))))))
 
+(eval-after-load 'magit
+  '(define-key magit-mode-map "v"
+     #'endless/visit-pull-request-url))
 
+(defun magit-create-branch-from-jira-issue ()
+  (interactive)
+  (let ((branch-name (replace-regexp-in-string "[^a-zA-Z0-9-]+" "_" (s-trim (current-kill 0 t))))
+        (start-point (magit-read-branch-or-commit "Create branch starting at")))
+    (magit-branch branch-name start-point)
+    (magit-checkout branch-name)))
 
-
+(add-hook 'git-commit-mode-hook (lambda ()
+                                  (ignore-errors
+                                    (when (string-prefix-p "C:\\Projects\\ftgp\\monitor" (magit-toplevel))
+                                      (goto-char (point-min))
+                                      (insert (format "%s: " (car (s-slice-at "_" (magit-get-current-branch)))))))))
 
 
 

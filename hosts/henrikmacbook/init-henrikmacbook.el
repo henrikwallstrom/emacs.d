@@ -10,5 +10,9 @@
 (defvar elixir-path "~/Project/github/elixir/")
 (defvar otp-path "~/Project/github/otp/")
 
+(defvar omnisharp-server-executable-path "~/Project/github/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe") 
+
+(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+
 
 (provide 'init-henrikmacbook)

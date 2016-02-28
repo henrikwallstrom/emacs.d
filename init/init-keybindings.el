@@ -57,9 +57,10 @@
 
 ;; Multiple-cursors
 (global-set-key (kbd "M-d") 'mc/mark-next-like-this)
-(global-set-key (kbd "M-D") 'mc/unmark-previous-like-this)
+(global-set-key (kbd "M-D") 'mc/unmark-next-like-this)
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+
 
 ;; Magit
 (global-set-key (kbd "C-x g") 'magit-status)

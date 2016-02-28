@@ -3,12 +3,15 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        cua--prefix-override-handler
         js2-mode-show-node
         keyboard-escape-quit
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        cua-exchange-point-and-mark
+        cua-paste
         helm-M-x
         mouse-buffer-menu
         switch-to-buffer
