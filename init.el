@@ -35,6 +35,8 @@
 (require 'init-company)
 (require 'init-ui)
 (require 'init-programming)
+(require 'init-elisp)
+(require 'init-clojure)
 (require 'init-js)
 (require 'init-yasnippet)
 ;;(require 'init-csharp)
