@@ -19,54 +19,7 @@
 
 ;; List from "C-h v package-activated-list"
 (defvar my-packages
-  '(beacon
-    smart-mode-line
-    rich-minority
-    ace-window
-    avy
-    alchemist
-    amd-mode
-    atom-one-dark-theme
-    color-theme-solarized
-    color-theme
-    company-tern
-    company
-    darcula-theme
-    dash-functional
-    dracula-theme
-    editorconfig
-    editorconfig-fnmatch
-    elixir-mode
-    exec-path-from-shell
-    f
-    flycheck
-    grunt
-    helm-projectile
-    helm
-    helm-core
-    js2-refactor
-    js2-mode
-    magit
-    git-commit
-    magit-popup
-    makey
-    multiple-cursors
-    projectile
-    pkg-info
-    epl
-    s
-    seti-theme
-    solarized-theme
-    tern-auto-complete
-    auto-complete
-    popup
-    tern
-    transpose-frame
-    vkill
-    with-editor
-    dash
-    async
-    yasnippet))
+'(ace-window alchemist amd-mode ag atom-one-dark-theme avy beacon color-theme-solarized color-theme company-tern company darcula-theme dash-at-point dash-functional discover-clj-refactor clj-refactor cider clojure-mode discover-js2-refactor discover dracula-theme editorconfig editorconfig-core editorconfig-fnmatch edn elixir-mode erlang exec-path-from-shell github-browse-file grunt gruvbox-theme helm-projectile helm helm-core hydra inflections js2-refactor magit git-commit magit-popup makey moe-theme multiple-cursors omnisharp csharp-mode flycheck paredit peg powerline prodigy f projectile pkg-info epl queue rainbow-delimiters s seti-theme skewer-mode js2-mode simple-httpd smart-mode-line rich-minority smartparens solarized-theme spinner tern-auto-complete auto-complete popup tern transpose-frame vkill with-editor dash async yasnippet zenburn-theme zerodark-theme zoom-window))
 
 ;; Not auto installed
 ;; zerodark-them
