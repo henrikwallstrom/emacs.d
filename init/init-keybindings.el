@@ -1,14 +1,21 @@
 ;; init-keybindings.el --- Global keybindings
+(require 'iflipb)
 
 ;; OS common 
 (global-set-key (kbd "C-z") 'undo)
-(global-set-key (kbd "C-a") 'mark-whole-buffer)
+(global-set-key (kbd "M-a") 'mark-whole-buffer)
 (global-set-key (kbd "M-s") 'save-buffer)
-(global-set-key (kbd "M-q") 'save-buffers-kill-terminal)
+;;(global-set-key (kbd "M-q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "M-w") 'kill-buffer)
 ;;(global-set-key (kbd "M-w") 'delete-window)
+;; (global-set-key (kbd "M-§") 'other-frame)
+;; (global-set-key (kbd "C-§") 'other-window)
 (global-set-key (kbd "M-§") 'other-frame)
-(global-set-key (kbd "C-§") 'other-window)
+
+(global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
+(global-set-key
+ (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
+ 'iflipb-previous-buffer)
 
 (global-set-key (kbd "M-1") 'zoom-window-zoom)
 (global-set-key (kbd "M-0") 'delete-window)
@@ -43,9 +50,6 @@
 ;; Maximize
 (global-set-key (kbd "M-RET") 'toggle-frame-maximized)
 
-;; Zoom-Window
-(global-set-key (kbd "C-1") 'zoom-window-zoom)
-
 ;; Help
 (define-key 'help-command (kbd "C-m") 'discover-my-major)
 (define-key 'help-command (kbd "C-f") 'find-function)
@@ -69,7 +73,8 @@
 (global-set-key (kbd "C-x M-b") 'magit-blame)
 
 ;; Replace buffer-menu with ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 
 (global-set-key (kbd "H-o") 'ace-window)
 
@@ -78,6 +83,10 @@
 
 ;; Company mode
 ;;(define-key company-active-map (kbd "TAB") 'company-complete-selection)
+
+;; Debug
+(global-set-key [f7] 'previous-error)
+(global-set-key [f8] 'next-error)
 
 
 (provide 'init-keybindings)

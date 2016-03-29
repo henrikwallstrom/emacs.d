@@ -7,6 +7,9 @@
 (require 'editorconfig)
 (editorconfig-mode 1)
 
+;; Flash screen
+;;(setq visible-bell t)
+
 ;; Newline at end of file
 (setq require-final-newline t)
 
@@ -18,9 +21,6 @@
 
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
-
-;; highlight the current line
-(global-hl-line-mode +1)
 
 ;; http://www.emacswiki.org/emacs/TrampMode
 (require 'tramp)

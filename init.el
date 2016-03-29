@@ -34,6 +34,7 @@
 (require 'init-backups)
 (require 'init-company)
 (require 'init-ui)
+(require 'init-dired)
 (require 'init-programming)
 (require 'init-elisp)
 (require 'init-clojure)

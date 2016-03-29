@@ -13,6 +13,7 @@
         cua-exchange-point-and-mark
         cua-paste
         helm-M-x
+        mark-whole-buffer
         mouse-buffer-menu
         switch-to-buffer
         toggle-frame-maximized
