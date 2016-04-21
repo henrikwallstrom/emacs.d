@@ -39,6 +39,7 @@
 (require 'init-elisp)
 (require 'init-clojure)
 (require 'init-js)
+(require 'init-web-mode)
 (require 'init-yasnippet)
 ;;(require 'init-csharp)
 

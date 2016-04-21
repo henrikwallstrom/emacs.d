@@ -69,4 +69,9 @@
 (require 'discover)
 (global-discover-mode 1)
 
+;; displays available keybindings
+(require 'which-key)
+(which-key-mode)
+
+
 (provide 'init-editor)
