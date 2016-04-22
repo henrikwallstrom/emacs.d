@@ -17,12 +17,16 @@
 (defvar local-packages-dir "~/.emacs.d/local-packages")
 (defvar site-lisp-dir "~/.emacs.d/site-lisp")
 (defvar host-dir (concat "~/.emacs.d/hosts/" host))
+(defvar emacs-js "~/.emacs.d/emacs-js/")
+(defvar widget-js "~/.emacs.d/emacs-js/widgetjs")
 
 ;; load path
 (add-to-list 'load-path init-dir)
 (add-to-list 'load-path local-packages-dir)
 (add-to-list 'load-path site-lisp-dir)
 (add-to-list 'load-path host-dir)
+(add-to-list 'load-path emacs-js)
+(add-to-list 'load-path widget-js)
 
 (dolist (directory (list init-dir local-packages-dir site-lisp-dir))
   (let ((default-directory directory))
@@ -38,7 +42,10 @@
 (require 'init-programming)
 (require 'init-elisp)
 (require 'init-clojure)
-(require 'init-js)
+;;(require 'init-js)
+(load-file (concat emacs-js "emacs-js.el"))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . js-mode))
+
 (require 'init-web-mode)
 (require 'init-yasnippet)
 ;;(require 'init-csharp)

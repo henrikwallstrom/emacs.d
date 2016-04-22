@@ -1,0 +1,3 @@
+[submodule "emacs-js"]
+	path = emacs-js
+	url = git@github.com:foretagsplatsen/emacs-js.git

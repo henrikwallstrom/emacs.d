@@ -11,7 +11,7 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 
 ;; web-mode in js files
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-content-types-alist
       '(("jsx" . "\\.js[x]?\\'")))
 
